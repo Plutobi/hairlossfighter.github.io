@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Crown Is Coming Back — The Coconut Oil Hair Recovery Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --plum:     #3D0066;
+    --violet:   #6A0572;
+    --lavender: #C77DFF;
+    --blush:    #FFD6F7;
+    --green:    #2D6A4F;
+    --mint:     #95D5B2;
+    --cream:    #FFF9FE;
+    --gold:     #D4AF37;
+    --warm:     #F8EFF6;
+    --text:     #1a0026;
+    --muted:    #6b5470;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #1a0030 0%, #3D0066 40%, #6A0572 70%, #8B2FC9 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(199,125,255,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(149,213,178,0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.18;
+    pointer-events: none;
+  }
+  .hero-orb.a { width: 500px; height: 500px; background: #C77DFF; top: -120px; right: -100px; animation: drift 8s ease-in-out infinite alternate; }
+  .hero-orb.b { width: 350px; height: 350px; background: #95D5B2; bottom: -80px; left: -60px;  animation: drift 11s ease-in-out infinite alternate-reverse; }
+  @keyframes drift { from { transform: translate(0,0); } to { transform: translate(30px, 20px); } }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(199,125,255,0.20);
+    border: 1px solid rgba(199,125,255,0.45);
+    color: #E8BBFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    border-radius: 50px;
+    margin-bottom: 32px;
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-emoji {
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s 0.1s ease both;
+    display: block;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 80px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--lavender);
+  }
+  .hero-sub {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(22px, 3.5vw, 34px);
+    color: var(--mint);
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s 0.35s ease both;
+  }
+  .hero-desc {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 44px;
+    animation: fadeUp 0.8s 0.45s ease both;
+  }
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    animation: fadeUp 0.8s 0.6s ease both;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #C77DFF, #8B2FC9);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 48px;
+    border-radius: 60px;
+    text-decoration: none;
+    box-shadow: 0 8px 32px rgba(199,125,255,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(199,125,255,0.55); }
+  .hero-guarantee {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.5px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: bounce 2s infinite;
+  }
+  .hero-scroll::after { content: '↓'; font-size: 18px; }
+  @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SOCIAL PROOF STRIP ─────────────────── */
+  .strip {
+    background: var(--plum);
+    color: rgba(255,255,255,0.85);
+    padding: 18px 24px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    overflow: hidden;
+  }
+  .strip-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .strip-item { display: flex; align-items: center; gap: 8px; }
+  .strip-item span { color: var(--lavender); font-size: 18px; }
+
+  /* ─── SECTIONS ────────────────────────────── */
+  section { padding: 80px 24px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .container-wide { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--violet);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4.5vw, 48px);
+    font-weight: 800;
+    color: var(--plum);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .section-title em { font-style: italic; color: var(--violet); }
+  .section-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #3a2244;
+    margin-bottom: 20px;
+  }
+
+  /* ─── PAIN SECTION ───────────────────────── */
+  .pain { background: var(--warm); }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .pain-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 24px;
+    border: 1px solid rgba(199,125,255,0.2);
+    box-shadow: 0 4px 24px rgba(61,0,102,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .pain-card:hover { transform: translateY(-4px); box-shadow: 0 10px 36px rgba(61,0,102,0.11); }
+  .pain-emoji { font-size: 36px; margin-bottom: 14px; display: block; }
+  .pain-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--plum); margin-bottom: 10px; font-weight: 700; }
+  .pain-card p { font-size: 15px; line-height: 1.65; color: var(--muted); }
+
+  /* ─── PROMISE SECTION ────────────────────── */
+  .promise { background: linear-gradient(135deg, var(--plum) 0%, var(--violet) 100%); color: #fff; }
+  .promise .section-title { color: #fff; }
+  .promise .section-title em { color: var(--lavender); }
+  .promise-list { margin-top: 36px; display: flex; flex-direction: column; gap: 18px; }
+  .promise-item {
+    display: flex; align-items: flex-start; gap: 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(199,125,255,0.25);
+    border-radius: 16px;
+    padding: 22px 24px;
+  }
+  .promise-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .promise-item h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .promise-item p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.75); }
+
+  /* ─── WHAT'S INSIDE ──────────────────────── */
+  .inside { background: #fff; }
+  .chapters { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+  .chapter-row {
+    display: flex; align-items: flex-start; gap: 20px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    border: 1.5px solid rgba(199,125,255,0.15);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: var(--warm);
+  }
+  .chapter-row:hover { border-color: var(--lavender); box-shadow: 0 4px 24px rgba(199,125,255,0.12); }
+  .chap-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--lavender);
+    opacity: 0.5;
+    flex-shrink: 0;
+    min-width: 44px;
+    line-height: 1;
+    margin-top: 4px;
+  }
+  .chap-emoji { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .chap-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--plum); margin-bottom: 6px; }
+  .chap-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* ─── TESTIMONIALS ───────────────────────── */
+  .testimonials { background: var(--warm); }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
+  .testi-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px 26px;
+    box-shadow: 0 4px 28px rgba(61,0,102,0.07);
+    border: 1px solid rgba(199,125,255,0.15);
+    position: relative;
+  }
+  .testi-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: var(--lavender);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px; left: 20px;
+    line-height: 1;
+  }
+  .testi-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; }
+  .testi-text { font-size: 15px; line-height: 1.7; color: #3a2244; margin-bottom: 20px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--lavender), var(--mint));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .testi-name { font-weight: 700; font-size: 14px; color: var(--plum); }
+  .testi-detail { font-size: 12px; color: var(--muted); }
+
+  /* ─── RECIPES PREVIEW ────────────────────── */
+  .recipes-preview { background: #fff; }
+  .recipe-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .recipe-pill {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--warm);
+    border: 1.5px solid rgba(199,125,255,0.25);
+    border-radius: 50px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--plum);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .recipe-pill:hover { background: #EDD6FF; border-color: var(--lavender); }
+
+  /* ─── NATURAL HAIR SECTION ───────────────── */
+  .naturalhair {
+    background: linear-gradient(135deg, #0d3320 0%, #1B4332 60%, #2D6A4F 100%);
+    color: #fff;
+  }
+  .naturalhair .section-title { color: #fff; }
+  .naturalhair .section-title em { color: var(--mint); }
+  .naturalhair .section-body { color: rgba(255,255,255,0.8); }
+  .nh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-top: 36px; }
+  .nh-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(149,213,178,0.25);
+    border-radius: 18px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .nh-card .icon { font-size: 32px; margin-bottom: 12px; display: block; }
+  .nh-card h3 { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; margin-bottom: 8px; font-weight: 700; }
+  .nh-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+  /* ─── PRICING ────────────────────────────── */
+  .pricing { background: var(--warm); }
+  .price-box {
+    max-width: 520px;
+    margin: 40px auto 0;
+    background: #fff;
+    border-radius: 28px;
+    padding: 48px 40px;
+    box-shadow: 0 12px 60px rgba(61,0,102,0.13);
+    border: 2px solid var(--lavender);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .price-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, var(--lavender), var(--mint), var(--lavender));
+  }
+  .price-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--lavender), #8B2FC9);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+  .price-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 800; color: var(--plum); margin-bottom: 8px; }
+  .price-sub { font-size: 15px; color: var(--muted); margin-bottom: 28px; }
+  .price-amount {
+    display: flex; align-items: flex-start; justify-content: center; gap: 6px;
+    margin-bottom: 8px;
+  }
+  .price-currency { font-size: 26px; font-weight: 700; color: var(--violet); margin-top: 8px; }
+  .price-number { font-family: 'Playfair Display', serif; font-size: 80px; font-weight: 900; color: var(--plum); line-height: 1; }
+  .price-old { font-size: 16px; color: var(--muted); text-decoration: line-through; margin-bottom: 28px; }
+  .price-includes { text-align: left; margin: 28px 0; display: flex; flex-direction: column; gap: 12px; }
+  .price-line { display: flex; align-items: center; gap: 12px; font-size: 15px; color: #3a2244; }
+  .price-line .tick { color: var(--green); font-size: 18px; font-weight: 700; }
+  .price-cta {
+    display: block;
+    background: linear-gradient(135deg, var(--plum), var(--violet));
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 60px;
+    text-decoration: none;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 32px rgba(61,0,102,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .price-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(61,0,102,0.4); }
+  .price-note { font-size: 13px; color: var(--muted); }
+
+  /* ─── PLATFORMS ──────────────────────────── */
+  .platforms { background: var(--plum); padding: 40px 24px; text-align: center; }
+  .platforms p { color: rgba(255,255,255,0.6); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; font-weight: 700; }
+  .platform-logos { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .platform-logo {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 14px 28px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  /* ─── FAQ ────────────────────────────────── */
+  .faq { background: #fff; }
+  .faq-list { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item {
+    border: 1.5px solid rgba(199,125,255,0.2);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 20px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--plum);
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--warm);
+    user-select: none;
+    transition: background 0.2s;
+  }
+  .faq-q:hover { background: #EDD6FF; }
+  .faq-q .arrow { font-size: 20px; transition: transform 0.3s; color: var(--lavender); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 24px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--muted);
+    background: #fff;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 20px 24px; }
+  .faq-item.open .arrow { transform: rotate(45deg); }
+
+  /* ─── FINAL CTA ──────────────────────────── */
+  .final-cta {
+    background: linear-gradient(145deg, #1a0030, #3D0066, #6A0572);
+    text-align: center;
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(199,125,255,0.12), transparent);
+  }
+  .final-cta .crown { font-size: 72px; display: block; margin-bottom: 24px; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .final-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(34px, 5vw, 56px); font-weight: 900; color: #fff; margin-bottom: 16px; line-height: 1.1; }
+  .final-cta h2 em { font-style: italic; color: var(--lavender); }
+  .final-cta p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 40px; line-height: 1.7; }
+  .final-cta .btn-primary { font-size: 20px; padding: 22px 56px; }
+
+  /* ─── FOOTER ─────────────────────────────── */
+  footer {
+    background: #0d0015;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 30px 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer a { color: var(--lavender); text-decoration: none; }
+
+  /* ─── STICKY BAR ─────────────────────────── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--plum);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  .sticky-bar.visible { transform: translateY(0); }
+  .sticky-bar p { color: rgba(255,255,255,0.85); font-size: 15px; font-weight: 700; }
+  .sticky-bar p em { color: var(--lavender); font-style: normal; }
+  .sticky-btn {
+    background: linear-gradient(135deg, #C77DFF, #8B2FC9);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 18px rgba(199,125,255,0.45);
+    transition: transform 0.2s;
+  }
+  .sticky-btn:hover { transform: scale(1.04); }
+
+  @media (max-width: 600px) {
+    .sticky-bar { flex-direction: column; gap: 10px; padding: 14px 16px; }
+    .price-box { padding: 36px 24px; }
+    .price-number { font-size: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb a"></div>
+  <div class="hero-orb b"></div>
+  <span class="hero-badge">✨ For Postpartum Mamas &amp; Natural Hair Women</span>
+  <span class="hero-emoji">🥥👑💜</span>
+  <h1>Your Crown Is<br/><em>Coming Back</em></h1>
+  <p class="hero-sub">The Coconut Oil Hair Recovery Guide</p>
+  <p class="hero-desc">The complete, step-by-step guide to stopping postpartum hair loss, restoring your edges, and bringing your natural hair back — using nature's most powerful hair oil.</p>
+  <div class="hero-cta-group">
+    <a href="#pricing" class="btn-primary">💜 Yes, I Want My Hair Back →</a>
+    <span class="hero-guarantee">📖 Instant digital download &nbsp;·&nbsp; Safe while breastfeeding &nbsp;·&nbsp; 100% natural</span>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><span>💜</span> Written for postpartum mamas</div>
+    <div class="strip-item"><span>🌿</span> 100% natural ingredients</div>
+    <div class="strip-item"><span>🥥</span> 5 proven recipes inside</div>
+    <div class="strip-item"><span>👑</span> Includes edge restoration guide</div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="container">
+    <span class="section-label">You are not alone</span>
+    <h2 class="section-title">Does Any of This Sound <em>Familiar?</em></h2>
+    <p class="section-body">You grew a whole human being. And now, on top of sleepless nights and everything else, you're watching your hair fall out in handfuls. It's exhausting — and it's heartbreaking. You deserve answers.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-emoji">😢</span>
+        <h3>Clumps in the shower drain</h3>
+        <p>Every wash day feels like you're losing more than you can afford. You're scared it won't stop.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-emoji">😰</span>
+        <h3>Thinning edges & hairline</h3>
+        <p>The part of your hair that frames your face is disappearing — and it hurts more than you expected.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-emoji">😔</span>
+        <h3>Dry, breaking natural hair</h3>
+        <p>Your coils and curls feel nothing like they used to. Breakage, dryness, and brittleness everywhere.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-emoji">😤</span>
+        <h3>No one tells you what to do</h3>
+        <p>Everyone talks about the baby. Nobody warned you about this — or told you how to fix it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="container">
+    <span class="section-label" style="color:rgba(255,255,255,0.5)">What this guide does for you</span>
+    <h2 class="section-title">Here Is What Changes When You Start <em>Following This Guide</em></h2>
+    <div class="promise-list">
+      <div class="promise-item">
+        <span class="promise-icon">🛑</span>
+        <div>
+          <h3>Shedding slows down — within weeks</h3>
+          <p>The step-by-step application methods and scalp massage routine calm your follicles and reduce the daily shedding that has been scaring you.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <span class="promise-icon">🌱</span>
+        <div>
+          <h3>Baby hairs appear along your hairline</h3>
+          <p>With the Edge Restorer recipe and daily edge care routine, most women start seeing new growth at the hairline within 4 to 8 weeks.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <span class="promise-icon">💧</span>
+        <div>
+          <h3>Your natural hair feels soft, moisturised & strong again</h3>
+          <p>The Moisture Mask and Protein Rebuilder recipes bring back the softness, elasticity, and strength your curls had before baby.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <span class="promise-icon">👑</span>
+        <div>
+          <h3>You feel like yourself again</h3>
+          <p>Because your hair is not just hair. It is your confidence, your identity, your crown. And you deserve to have it back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside">
+  <div class="container">
+    <span class="section-label">What's inside the guide</span>
+    <h2 class="section-title">8 Chapters of Real, <em>Practical Help</em></h2>
+    <p class="section-body">No filler. No complicated science. Every chapter is written for a tired mama who needs clear, actionable steps — not a textbook.</p>
+    <div class="chapters">
+      <div class="chapter-row">
+        <span class="chap-num">01</span>
+        <span class="chap-emoji">💜</span>
+        <div>
+          <p class="chap-title">What Postpartum Hair Loss Really Is</p>
+          <p class="chap-desc">Understand exactly why this is happening, when it will stop, and why your hair is coming back — so you can stop panicking and start healing.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">02</span>
+        <span class="chap-emoji">🥥</span>
+        <div>
+          <p class="chap-title">Why Coconut Oil Is Your Hair's Best Friend Right Now</p>
+          <p class="chap-desc">The science behind why this one oil works when others don't — and exactly which type to buy.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">03</span>
+        <span class="chap-emoji">🌿</span>
+        <div>
+          <p class="chap-title">How to Apply Coconut Oil — Step by Step</p>
+          <p class="chap-desc">3 proven methods including the pre-wash treatment, daily edge care routine, and overnight deep conditioning — with a full frequency guide.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">04</span>
+        <span class="chap-emoji">✨</span>
+        <div>
+          <p class="chap-title">5 Nourishing Coconut Oil Recipes for Mamas</p>
+          <p class="chap-desc">The Regrowth Serum, Moisture Mask, Scalp Soother, Protein Rebuilder, and the Edge Restorer — all safe for breastfeeding.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">05</span>
+        <span class="chap-emoji">🍽️</span>
+        <div>
+          <p class="chap-title">Eating to Restore Your Hair From the Inside</p>
+          <p class="chap-desc">The exact nutrients your body is depleted of postpartum, simple meal ideas, and how to supplement wisely.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">06</span>
+        <span class="chap-emoji">🌸</span>
+        <div>
+          <p class="chap-title">Special Section: Coconut Oil for Natural & Afro-Textured Hair</p>
+          <p class="chap-desc">The LOC method, protective styling tips, low porosity hair guidance, and a targeted edge restoration routine.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">07</span>
+        <span class="chap-emoji">🛁</span>
+        <div>
+          <p class="chap-title">Gentle Hair Care Habits That Speed Up Recovery</p>
+          <p class="chap-desc">Wash day, drying, styling, and sleep habits that make everything else work faster.</p>
+        </div>
+      </div>
+      <div class="chapter-row">
+        <span class="chap-num">08</span>
+        <span class="chap-emoji">📅</span>
+        <div>
+          <p class="chap-title">Your 30-Day Hair Recovery Plan</p>
+          <p class="chap-desc">Week-by-week, day-by-day — a gentle, realistic plan built around your life as a new mama.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECIPES PREVIEW -->
+<section class="recipes-preview">
+  <div class="container">
+    <span class="section-label">The recipes inside</span>
+    <h2 class="section-title">5 Recipes You'll Use <em>Every Single Week</em></h2>
+    <p class="section-body">Each recipe is made from simple, affordable ingredients. All are 100% natural and safe while breastfeeding. Each one targets a specific problem.</p>
+    <div class="recipe-pills">
+      <div class="recipe-pill">🌿 The Regrowth Serum</div>
+      <div class="recipe-pill">💧 The Moisture Mask</div>
+      <div class="recipe-pill">🌱 The Scalp Soother</div>
+      <div class="recipe-pill">🥚 The Protein Rebuilder</div>
+      <div class="recipe-pill">👑 The Edge Restorer</div>
+    </div>
+  </div>
+</section>
+
+<!-- NATURAL HAIR SECTION -->
+<section class="naturalhair">
+  <div class="container">
+    <span class="section-label" style="color:rgba(149,213,178,0.7)">For natural hair women</span>
+    <h2 class="section-title">A Full Chapter Just for <em>Your Curls & Coils</em></h2>
+    <p class="section-body">Because natural, Afro-textured, and curly hair has unique needs — especially postpartum. This guide sees you and speaks directly to you.</p>
+    <div class="nh-grid">
+      <div class="nh-card">
+        <span class="icon">🔄</span>
+        <h3>The LOC & LCO Method</h3>
+        <p>How to use coconut oil as part of your moisture routine for maximum softness and retention.</p>
+      </div>
+      <div class="nh-card">
+        <span class="icon">🫶</span>
+        <h3>Protective Style Scalp Care</h3>
+        <p>How to nourish your scalp underneath braids, twists, and weaves without taking them down.</p>
+      </div>
+      <div class="nh-card">
+        <span class="icon">🌡️</span>
+        <h3>Low Porosity Tips</h3>
+        <p>How to use heat to open your cuticle and let coconut oil actually penetrate your strands.</p>
+      </div>
+      <div class="nh-card">
+        <span class="icon">👑</span>
+        <h3>Edge Restoration</h3>
+        <p>A nightly routine to bring back thin, broken, or missing edges — consistently and gently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — placeholder for real reviews -->
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align:center; max-width:680px; margin:0 auto;">
+      <span class="section-label">Coming soon</span>
+      <h2 class="section-title">Real Mamas. Real <em>Results.</em></h2>
+      <p class="section-body">Reviews from real readers are on their way. Tried this guide? We'd love to hear your story — reach out and share your experience.</p>
+      <a href="mailto:alabioluwatobi2018@gmail.com.com" class="btn-primary" style="display:inline-block; margin-top:8px; font-size:16px; padding:16px 36px;">💜 Share Your Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label">Get the guide today</span>
+      <h2 class="section-title">Your Crown Is Worth It, <em>Mama</em></h2>
+      <p class="section-body">One small investment. A lifetime of knowing how to care for your hair naturally — through every season of motherhood.</p>
+    </div>
+    <div class="price-box">
+      <span class="price-badge">Most Popular</span>
+      <p class="price-title">Your Crown Is Coming Back</p>
+      <p class="price-sub">The Complete Coconut Oil Hair Recovery Guide</p>
+      <div class="price-amount">
+        <span class="price-currency">$</span>
+        <span class="price-number">9.99</span>
+      </div>
+      <p class="price-old">Regular price $19.99</p>
+      <div class="price-includes">
+        <div class="price-line"><span class="tick">✓</span> 8 full chapters of step-by-step guidance</div>
+        <div class="price-line"><span class="tick">✓</span> 5 proven coconut oil recipes</div>
+        <div class="price-line"><span class="tick">✓</span> Full natural hair chapter (LOC method, edges, protective styles)</div>
+        <div class="price-line"><span class="tick">✓</span> 30-day hair recovery plan</div>
+        <div class="price-line"><span class="tick">✓</span> Postpartum nutrition guide</div>
+        <div class="price-line"><span class="tick">✓</span> Q&amp;A bonus section</div>
+        <div class="price-line"><span class="tick">✓</span> Instant digital download — read on any device</div>
+        <div class="price-line"><span class="tick">✓</span> 100% safe for breastfeeding mamas</div>
+      </div>
+      <a href="https://selar.com/t47znne57g" class="price-cta">💜 Get Instant Access — $9.99</a>
+      <p class="price-note">🔒 Secure checkout &nbsp;·&nbsp; Instant download &nbsp;·&nbsp; Available on Selar, Amazon & Shopify</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<div class="platforms">
+  <p>Available on</p>
+  <div class="platform-logos">
+    <div class="platform-logo">🛒 Selar</div>
+    <div class="platform-logo">🛍️ Shopify</div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <span class="section-label">Questions answered</span>
+    <h2 class="section-title">You Might Be <em>Wondering...</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is this safe to use while I'm breastfeeding? <span class="arrow">+</span></div>
+        <div class="faq-a">Absolutely. Every recipe in this guide uses natural, food-grade ingredients. Virgin coconut oil is so safe that many lactation consultants recommend it as a nipple cream. There are no synthetic chemicals anywhere in this guide.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will my hair actually grow back? <span class="arrow">+</span></div>
+        <div class="faq-a">For the vast majority of postpartum women, yes — completely. Postpartum hair loss is almost always temporary. The methods in this guide don't just wait for recovery to happen passively — they actively support and speed up your body's natural regrowth process.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I have 4C / coily / Afro-textured hair. Is this guide for me? <span class="arrow">+</span></div>
+        <div class="faq-a">Yes — there is an entire dedicated chapter (Chapter 6) written specifically for natural, coily, and Afro-textured hair. It covers the LOC method, low porosity tips, protective styling scalp care, and a specific edge restoration routine.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I'm exhausted. Is this realistic to follow with a baby? <span class="arrow">+</span></div>
+        <div class="faq-a">This guide was written with you in mind. The 30-day plan is broken into tiny, manageable steps. The minimum effective routine takes about 10 minutes and can be done during nap time. You don't have to do everything — just start with one thing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How quickly will I see results? <span class="arrow">+</span></div>
+        <div class="faq-a">Most mamas notice reduced shedding and a healthier scalp within 2 to 4 weeks. Visible baby hairs at the hairline typically appear within 4 to 8 weeks of consistent use. Full density recovery takes 3 to 6 months — but every week of consistent care makes a difference.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What format is the ebook? How do I access it? <span class="arrow">+</span></div>
+        <div class="faq-a">The guide is a downloadable digital file (PDF/DOCX) that you can read on your phone, tablet, laptop, or e-reader — anywhere, anytime. Access is instant after purchase.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <span class="crown">👑</span>
+  <h2>Your Hair Is Already<br/><em>Growing Back.</em></h2>
+  <p>Give it the support it deserves. Start your recovery today — gently, naturally, and at your own pace.</p>
+  <a href="https://selar.com/t47znne57g" class="btn-primary">💜 Get Your Guide Now — $9.99</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Your Crown Is Coming Back. All rights reserved.</p>
+  <p>Available on <a href="#">Selar</a> &nbsp;·&nbsp; <a href="#">Amazon</a> &nbsp;·&nbsp; <a href="#">Shopify</a></p>
+  <p style="margin-top:10px; font-size:11px;">This guide is for informational purposes only and is not a substitute for medical advice. Always consult your healthcare provider for medical concerns.</p>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <p>💜 <em>Your Crown Is Coming Back</em> — Only $9.99</p>
+  <a href="https://selar.com/t47znne57g" class="sticky-btn">Get Instant Access →</a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Sticky bar on scroll
+  const stickyBar = document.getElementById('stickyBar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) stickyBar.classList.add('visible');
+    else stickyBar.classList.remove('visible');
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.pain-card, .promise-item, .chapter-row, .testi-card, .nh-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
